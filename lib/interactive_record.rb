@@ -51,7 +51,7 @@ class InteractiveRecord
     col_name_for_find = attribute.keys[0]
     value = attribute[col_name_for_find]
     value_for_find = value.class == Fixnum ? value : "'#{value}'"
-    binding.pry
+    
     sql = <<-SQL
           SELECT * FROM #{table_name}
           WHERE #{col_name_for_find} = #{value_for_find}
