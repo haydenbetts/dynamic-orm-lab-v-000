@@ -53,7 +53,7 @@ class InteractiveRecord
     value_for_find = value.class == Fixnum ? value : '#{value}'
     sql = <<-SQL
           SELECT * FROM #{table_name}
-          WHERE #{col_name_for_find} = #{value_for_insert}
+          WHERE #{col_name_for_find} = #{value_for_find}
           SQL
     DB[:conn].execute(sql)
   end
